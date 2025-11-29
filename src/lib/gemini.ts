@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEY = 'AIzaSyBiW6ctIHGIXzG4j7UTacbz_zHKs2dj5Ug';
+const API_KEY = 'gemini-api-key';
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 export type SymbolType =
