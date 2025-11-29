@@ -1,0 +1,90 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        brass: {
+          50: '#fdfaf5',
+          100: '#f9f1e3',
+          200: '#f0dec1',
+          300: '#e5c89b',
+          400: '#d4a574',
+          500: '#c89255',
+          600: '#b8773d',
+          700: '#986032',
+          800: '#7a4d2c',
+          900: '#644027',
+        },
+        mahogany: {
+          50: '#faf6f5',
+          100: '#f0e7e3',
+          200: '#dcc9bf',
+          300: '#c3a593',
+          400: '#a37965',
+          500: '#8b5e48',
+          600: '#6e4a38',
+          700: '#5a3c2e',
+          800: '#4a3328',
+          900: '#3e2d24',
+        },
+        gold: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        wood: {
+          50: '#faf8f5',
+          100: '#f0eae0',
+          200: '#dfd2bd',
+          300: '#c9b594',
+          400: '#b29770',
+          500: '#957b58',
+          600: '#7a634a',
+          700: '#5f4d3b',
+          800: '#4d3f31',
+          900: '#3d3228',
+        },
+      },
+      fontFamily: {
+        serif: ['Cinzel', 'Georgia', 'serif'],
+        ornate: ['Cinzel Decorative', 'serif'],
+      },
+      boxShadow: {
+        'brass-inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.3)',
+        'brass-outer': '0 4px 12px rgba(184, 119, 61, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)',
+        'gold-glow': '0 0 20px rgba(251, 191, 36, 0.3), 0 0 40px rgba(251, 191, 36, 0.1)',
+        'mahogany': '0 8px 24px rgba(62, 45, 36, 0.6), 0 4px 8px rgba(0, 0, 0, 0.4)',
+      },
+      backgroundImage: {
+        'wood-texture': "url(\"data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='80' height='80' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E\")",
+        'brass-gradient': 'linear-gradient(135deg, #d4a574 0%, #b8773d 50%, #986032 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #d97706 100%)',
+        'mahogany-gradient': 'linear-gradient(180deg, #5a3c2e 0%, #3e2d24 100%)',
+      },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+        'shimmer': 'shimmer 3s ease-in-out infinite',
+      },
+      keyframes: {
+        'pulse-glow': {
+          '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
+          '50%': { opacity: '0.8', filter: 'brightness(1.2)' },
+        },
+        'shimmer': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
